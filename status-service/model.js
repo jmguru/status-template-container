@@ -10,7 +10,7 @@ var config       = YAML.parse(file);
 const tName = config.tName;
 
 var connection = mysql.createConnection({
-  host     : config.dbHost,
+  host     : process.env.DBHOST || config.dbHost,
   user     : config.dbUser,
   password : config.dbPass,
   database : config.dbName
