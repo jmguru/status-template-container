@@ -17,23 +17,13 @@ var connection = mysql.createConnection({
 });
 
 exports.getStatus = function(cb) {
-    var myquery = `create table if not exists nodestatus(
-                       node varchar(20) primary key not null,
-                       status varchar(20) not null
-                   )`;
 
+    var myquery = 'SELECT node, status from nodestatus';
     connection.query(myquery, function(error, results, fields) {
           if(error) {
-             throw error;
+             return console.error(error.message); 
           }
-
-          var mmyquery = 'SELECT node, status from nodestatus';
-          connection.query(mmyquery, function (eerror, rresults, ffields) {
-               if (eerror) {
-                  throw eerror;
-               }
-               cb(rresults,null);
-          }); 
+          cb(results,null);
     }); 
 } 
 

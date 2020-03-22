@@ -1,7 +1,7 @@
 version: "2"
 services:
    dbserver:
-      build: ./db-service
+      build: ./db-service 
       environment:
         MYSQL_HOME: /var/lib/mysql
         MYSQL_ROOT_PASSWORD: 1234

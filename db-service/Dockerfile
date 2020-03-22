@@ -1,1 +1,3 @@
-FROM hypriot/rpi-mysql:latest
+FROM mariadb:latest 
+
+ADD setup.sql /docker-entrypoint-initdb.d
