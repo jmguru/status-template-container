@@ -1,0 +1,8 @@
+---
+dbHost: 192.168.1.244
+dbUser: root
+dbPass: '1234'
+dbName: cclabs
+tName: nodestatus
+appPort: '2116'
+hostip: 192.168.1.244

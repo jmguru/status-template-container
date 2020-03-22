@@ -1,0 +1,36 @@
+{
+  "name": "watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "server": "nodemon ./index.js",
+    "dev": "concurrently --kill-others \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmguru/watcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmguru/watcher/issues"
+  },
+  "homepage": "https://github.com/jmguru/watcher#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "forever": "^1.0.0",
+    "forever-monitor": "^1.7.1",
+    "fs": "0.0.1-security",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "pug": "^2.0.4",
+    "slack-node": "^0.1.8",
+    "util": "^0.12.1",
+    "yaml": "^1.6.0"
+  }
+}
